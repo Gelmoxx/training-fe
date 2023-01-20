@@ -1,0 +1,17 @@
+<h1>New customer</h1>
+<div class="container">
+<form [formGroup]="form">
+ <label>First name
+    <input class="input" formControlName="firstName">
+  </label><br>
+  <label>Last name
+    <input class="input" formControlName="lastName">
+  </label><br>
+  <label>Contact
+    <input class="input" formControlName="contact">
+  </label><br>
+  <button class="btn-focus" (click)="add()" *ngIf="form.value.id === null">Create</button>
+  <button class="btn-focus" (click)="edit()" *ngIf="form.value.id !== null">Edit</button>
+  <button class="btn-remove" (click)="remove()">Delete</button>
+</form>
+</div>

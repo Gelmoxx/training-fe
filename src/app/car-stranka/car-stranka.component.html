@@ -1,0 +1,17 @@
+<app-car-formular [car]="actCar"
+                       (addCar)="add($event)"
+                       (editCar)="edit($event)">
+</app-car-formular>
+<br>
+<br>
+<app-car-zoznam [cars]="cars"
+                     (editCar)="editCarFromList($event)"
+                     (removeCar)="removeCarFromList($event)">
+</app-car-zoznam>
+
+<br>
+
+<div>
+  <button class="btn-secondary" (click)="goBack()">Back</button>
+</div>
+

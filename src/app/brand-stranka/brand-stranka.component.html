@@ -1,0 +1,17 @@
+<app-brand-formular [brand]="actBrand"
+                       (addBrand)="add($event)"
+                       (editBrand)="edit($event)">
+</app-brand-formular>
+<br>
+<br>
+<app-brand-zoznam [brands]="brands"
+                     (editBrand)="editBrandFromList($event)"
+                     (removeBrand)="removeBrandFromList($event)">
+</app-brand-zoznam>
+
+<br>
+
+<div>
+  <button class="btn-secondary" (click)="goBack()">Back</button>
+</div>
+

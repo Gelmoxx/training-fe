@@ -1,0 +1,37 @@
+<h1>List of books</h1>
+
+<div *ngIf="!books || books?.length === 0">
+  List of books is empty
+</div>
+
+
+<table id="table" *ngIf="books.length > 0">
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Title of book</th>
+    <th>ISBN</th>
+    <th>Count</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{ book.id }}</td>
+    <td>{{ book.authorFirstName }}</td>
+    <td>{{ book.authorLastName }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.isbn }}</td>
+    <td>{{ book.bookCount }}</td>
+
+    <td>
+      <button clas="btn-secondary" (click)="edit(book)">Edit</button>
+      <button (click)="remove(book)">Delete</button>
+    </td>
+
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,26 @@
+<h1>List of customers</h1>
+
+<div *ngIf="!brands || brands?.length === 0">
+  List of customers is empty
+</div>
+
+<table class="table" id="table" *ngIf="brands?.length > 0">
+  <thead>
+  <th>ID</th>
+  <th>BRAND</th>
+  <th></th>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of brands">
+    <td>{{c.id}}</td>
+    <td>{{c.brandName}}</td>
+    <td>
+      <button class="btn-secondary" (click)="edit(c)">Edit</button>
+      <button class="btn-remove" (click)="remove(c)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+

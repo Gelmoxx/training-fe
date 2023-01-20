@@ -1,0 +1,19 @@
+<h1>Formulár pre knihy</h1>
+
+<form [formGroup]="form">
+  meno:
+  <input formControlName="authorFirstName"><br>
+  priezvisko:
+  <input formControlName="authorLastName"><br>
+  názov:
+  <input formControlName="title"><br>
+  isbn:
+  <input formControlName="isbn"><br>
+  id:
+  <input formControlName="id"><br>
+  dostupné kusy:
+  <input formControlName="bookCount"><br>
+  <button (click)="add()" *ngIf="form.value.id === null">Pridaj</button>&nbsp;
+  <button (click)="edit()" *ngIf="form.value.id !== null">Edit</button>&nbsp;&nbsp;
+  <button (click)="remove()">Vymaž</button>
+</form>
